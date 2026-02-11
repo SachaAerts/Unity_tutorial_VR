@@ -28,7 +28,7 @@ public class CustomTeleportationArea : MonoBehaviour
     {
         if (!isHover) return;
         circle.transform.localScale = defaultSize + math.sin(Time.time * speed) * amplitude * Vector3.one;
-        fillImage.fillAmount = PlayerController.Singleton.GetRightHandTeleportationWaitRatio;
+        fillImage.fillAmount = PlayerController.Singleton.Teleportation.GetRightHandTeleportationWaitRatio;
     }
 
     public void OnHover()

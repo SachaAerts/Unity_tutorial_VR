@@ -4,12 +4,12 @@ public class ObservationStateBehaviour : PlayerStateBehaviour
 {
     public override void Enter()
     {
-        player.SetTeleportationEnabled(true);
+        player.Teleportation.SetTeleportationEnabled(true);
     }
 
     public override void Exit()
     {
-        player.SetTeleportationEnabled(false);
+        player.Teleportation.SetTeleportationEnabled(false);
     }
 
     public override void Init(PlayerController reference)

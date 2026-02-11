@@ -3,9 +3,14 @@ using UnityEngine.InputSystem;
 
 public abstract class PlayerStateBehaviour : MonoBehaviour
 {
-    public abstract void Init();
+    protected PlayerController player;
 
-    public abstract void Tick();
+    public virtual void Init(PlayerController reference)
+    {
+        player = reference;
+    }
+
+    public abstract void Tick(Enums.ControllerState currentControllerState);
 
     public abstract void Enter();
 
@@ -14,6 +19,8 @@ public abstract class PlayerStateBehaviour : MonoBehaviour
     #region  Receive Inputs Callbacks
 
     public abstract void OnReceiveLeftJoystickAxis(InputAction.CallbackContext ctx);
+
+    public abstract void OnReceiveRightJoystickAxis(InputAction.CallbackContext ctx);
 
     #endregion
 }

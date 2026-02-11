@@ -4,20 +4,20 @@ public class ObservationStateBehaviour : PlayerStateBehaviour
 {
     public override void Enter()
     {
-        // Enables tp
+        player.SetTeleportationEnabled(true);
     }
 
     public override void Exit()
     {
-        // Disables tp
+        player.SetTeleportationEnabled(false);
     }
 
-    public override void Init()
+    public override void Init(PlayerController reference)
     {
-        
+        base.Init(reference);
     }
 
-    public override void Tick()
+    public override void Tick(Enums.ControllerState currentControllerState)
     {
         
     }
@@ -25,6 +25,11 @@ public class ObservationStateBehaviour : PlayerStateBehaviour
     #region  Receive Inputs Callbacks   
 
     public override void OnReceiveLeftJoystickAxis(InputAction.CallbackContext ctx)
+    {
+        
+    }
+
+    public override void OnReceiveRightJoystickAxis(InputAction.CallbackContext ctx)
     {
         
     }

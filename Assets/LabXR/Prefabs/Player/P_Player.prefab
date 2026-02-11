@@ -1765,6 +1765,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999b8c0896eecfb41b47d567d07ba74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  ObservationStateBehaviour: {fileID: 0}
+  FocusStateBehaviour: {fileID: 0}
   Recenter: {fileID: 8486826127113875410}
   teleportationProvider: {fileID: 376128065675935045}
   rightHandTeleportationRayInteractor: {fileID: 7320583679109334468}
